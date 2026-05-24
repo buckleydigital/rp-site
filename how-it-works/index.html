@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How ReclaimPower Works — Home Battery Matching Explained</title>
+  <meta name="description" content="How ReclaimPower's home battery matching works. Four simple steps from your details to an obligation-free quote with your area's #1 CEC-accredited installer." />
+  <link rel="canonical" href="https://reclaimpower.com.au/how-it-works" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--blue:#1D4ED8;--blue-deep:#1E3A8A;--blue-pale:#EFF6FF;--blue-mid:#BFDBFE;--amber:#F59E0B;--amber-pale:#FFFBEB;--white:#FFFFFF;--ink:#0F172A;--ink-mid:#1E3A5F;--muted:#475569;--muted-lt:#64748B;--border:rgba(29,78,216,0.13);--radius:20px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Outfit',sans-serif;background:var(--blue-pale);color:var(--ink);overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 6vw;background:rgba(239,246,255,0.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+    .logo{display:flex;align-items:center;gap:11px;text-decoration:none;}
+    .logo-bolt{width:38px;height:38px;background:linear-gradient(135deg,var(--blue),var(--blue-deep));border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 5px rgba(29,78,216,0.15),0 0 0 10px rgba(29,78,216,0.06);animation:pulse-bolt 3s ease-in-out infinite;flex-shrink:0;}
+    .logo-bolt svg{width:19px;height:19px;}
+    @keyframes pulse-bolt{0%,100%{box-shadow:0 0 0 5px rgba(29,78,216,0.15),0 0 0 10px rgba(29,78,216,0.06)}50%{box-shadow:0 0 0 8px rgba(29,78,216,0.2),0 0 0 16px rgba(29,78,216,0.04)}}
+    .logo-text{font-size:1.3rem;font-weight:800;color:var(--ink);letter-spacing:-0.03em;}
+    .logo-text span{color:var(--blue);}
+    .nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
+    .nav-links a{text-decoration:none;font-size:0.9rem;font-weight:600;color:var(--muted);transition:color 0.2s;}
+    .nav-links a:hover{color:var(--blue-deep);}
+    .nav-cta{background:linear-gradient(135deg,var(--blue),var(--blue-deep))!important;color:white!important;padding:11px 24px!important;border-radius:100px;font-weight:700!important;font-size:0.88rem!important;box-shadow:0 4px 16px rgba(29,78,216,0.35);transition:transform 0.2s,box-shadow 0.2s!important;}
+    .nav-cta:hover{transform:translateY(-1px)!important;box-shadow:0 8px 24px rgba(29,78,216,0.45)!important;}
+    .hamburger{display:none;flex-direction:column;justify-content:center;gap:5.5px;cursor:pointer;padding:8px;border:none;background:none;z-index:200;-webkit-tap-highlight-color:transparent;}
+    .hamburger span{display:block;width:24px;height:2.5px;background:var(--ink);border-radius:2px;transition:transform 0.3s,opacity 0.3s;}
+    .hamburger.open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+    .hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+    .hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+    .mob-nav{display:none;position:fixed;inset:0;background:var(--blue-pale);z-index:150;padding:88px 6vw 48px;flex-direction:column;overflow-y:auto;}
+    .mob-nav.open{display:flex;}
+    .mob-nav ul{list-style:none;display:flex;flex-direction:column;border-top:1.5px solid var(--border);}
+    .mob-nav ul li a{display:block;font-size:1.2rem;font-weight:700;color:var(--ink);text-decoration:none;padding:18px 4px;border-bottom:1.5px solid var(--border);transition:color 0.2s;}
+    .mob-nav ul li a:hover{color:var(--blue);}
+    .mob-cta-wrap{margin-top:32px;}
+    .mob-cta-wrap a{display:block;text-align:center;background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:white!important;padding:18px 32px;border-radius:100px;font-weight:700;font-size:1rem;text-decoration:none!important;box-shadow:0 4px 16px rgba(29,78,216,0.35);}
+    footer{background:var(--ink);padding:60px 6vw 30px;color:rgba(255,255,255,0.45);position:relative;z-index:1;}
+    .footer-top{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.07);gap:40px;flex-wrap:wrap;}
+    .footer-logo .logo-text{color:white;}
+    .footer-tagline{font-size:0.87rem;color:rgba(255,255,255,0.35);margin-top:10px;max-width:240px;line-height:1.65;}
+    .footer-col h4{font-size:0.75rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:14px;}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+    .footer-col a{text-decoration:none;font-size:0.88rem;font-weight:500;color:rgba(255,255,255,0.55);transition:color 0.2s;}
+    .footer-col a:hover{color:#93C5FD;}
+    .footer-bottom{padding-top:26px;display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;gap:16px;flex-wrap:wrap;}
+    .page-hero{padding:140px 6vw 80px;position:relative;z-index:1;max-width:720px;}
+    .eyebrow{font-size:0.78rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;}
+    .page-hero h1{font-size:clamp(2.4rem,5vw,4rem);font-weight:900;line-height:1.05;letter-spacing:-0.04em;color:var(--ink);margin-bottom:22px;}
+    .page-hero p{font-size:1.1rem;color:var(--muted-lt);line-height:1.75;}
+    .steps-section{background:linear-gradient(160deg,var(--blue-deep) 0%,#1E3A8A 100%);padding:100px 6vw;position:relative;z-index:1;}
+    .steps-section .eyebrow{color:#93C5FD;}
+    .steps-section h2{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:900;color:white;letter-spacing:-0.04em;margin-bottom:12px;line-height:1.1;}
+    .steps-section p.lead{font-size:1rem;color:rgba(255,255,255,0.6);margin-bottom:60px;max-width:480px;line-height:1.7;}
+    .steps-list{display:flex;flex-direction:column;gap:0;}
+    .step-row{display:grid;grid-template-columns:80px 1fr;gap:28px;align-items:flex-start;padding:32px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .step-row:last-child{border-bottom:none;}
+    .step-num-big{width:64px;height:64px;background:rgba(255,255,255,0.1);border:1.5px solid rgba(255,255,255,0.18);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:900;color:#93C5FD;flex-shrink:0;}
+    .step-content{}
+    .step-title{font-size:1.15rem;font-weight:900;color:white;margin-bottom:8px;letter-spacing:-0.02em;}
+    .step-desc{font-size:0.92rem;color:rgba(255,255,255,0.6);line-height:1.75;}
+    .step-detail{margin-top:14px;background:rgba(255,255,255,0.07);border-radius:12px;padding:16px 20px;}
+    .step-detail-title{font-size:0.75rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px;}
+    .step-detail ul{list-style:none;display:flex;flex-direction:column;gap:7px;}
+    .step-detail ul li{font-size:0.87rem;color:rgba(255,255,255,0.65);display:flex;align-items:flex-start;gap:8px;}
+    .step-detail ul li::before{content:"✓";color:#22C55E;font-weight:700;flex-shrink:0;}
+    .faq-section{padding:100px 6vw;max-width:760px;position:relative;z-index:1;}
+    .faq-section h2{font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900;color:var(--ink);letter-spacing:-0.04em;margin-bottom:40px;}
+    .faq-item{border-bottom:1.5px solid rgba(29,78,216,0.1);padding:20px 0;}
+    .faq-q{font-size:1.02rem;font-weight:700;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+    .faq-q svg{flex-shrink:0;width:22px;height:22px;color:var(--blue);transition:transform 0.3s;}
+    .faq-a{font-size:0.92rem;color:var(--muted-lt);line-height:1.75;max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.2s;}
+    .faq-item.open .faq-a{max-height:200px;padding-top:12px;}
+    .faq-item.open .faq-q svg{transform:rotate(45deg);}
+    .cta-band{background:linear-gradient(135deg,var(--blue-deep),var(--blue));padding:80px 6vw;text-align:center;position:relative;z-index:1;}
+    .cta-band h2{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;color:white;letter-spacing:-0.04em;margin:0 0 16px;}
+    .cta-band p{font-size:1.05rem;color:rgba(255,255,255,0.65);margin-bottom:36px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.7;}
+    .btn-white{display:inline-flex;align-items:center;gap:9px;background:white;color:var(--blue-deep);font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;padding:17px 34px;border-radius:100px;text-decoration:none;box-shadow:0 6px 28px rgba(0,0,0,0.2);transition:transform 0.2s,box-shadow 0.2s;}
+    .btn-white:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(0,0,0,0.3);}
+    @media(max-width:640px){.nav-links{display:none;}.hamburger{display:flex;}.step-row{grid-template-columns:56px 1fr;gap:16px;}}
+  </style>
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1692791048547338');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1692791048547338&ev=PageView&noscript=1"/></noscript>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5Y83P4MMK1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5Y83P4MMK1');
+  </script>
+</head>
+<body>
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-bolt"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+    <span class="logo-text">Reclaim<span>Power</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/guides">Free Guides</a></li>
+    <li><a href="/guides/battery-rebate-guide">Rebate Checker</a></li>
+    <li><a href="/how-it-works">How It Works</a></li>
+    <li><a href="/faq">FAQ</a></li>
+    <li><a href="/#quote" class="nav-cta">Get Matched Free</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMob()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-nav" id="mobNav">
+  <ul>
+    <li><a href="/guides" onclick="closeMob()">Free Guides</a></li>
+    <li><a href="/guides/battery-rebate-guide" onclick="closeMob()">Rebate Checker</a></li>
+    <li><a href="/how-it-works" onclick="closeMob()">How It Works</a></li>
+    <li><a href="/about" onclick="closeMob()">About</a></li>
+  </ul>
+  <div class="mob-cta-wrap"><a href="/#quote" onclick="closeMob()">Get Matched Free &rarr;</a></div>
+</div>
+
+<div class="page-hero">
+  <div class="eyebrow">How It Works</div>
+  <h1>From your details to a quote in 24 hours.</h1>
+  <p>No obligation, no four salespeople, no cowboys. Here's exactly what happens when you submit your details to ReclaimPower.</p>
+</div>
+
+<div class="steps-section">
+  <div class="eyebrow">The Process</div>
+  <h2>Four steps to your best battery quote.</h2>
+  <p class="lead">Simple, transparent, and faster than any alternative.</p>
+  <div class="steps-list">
+    <div class="step-row">
+      <div class="step-num-big">1</div>
+      <div class="step-content">
+        <div class="step-title">Tell us about your home (2 minutes)</div>
+        <p class="step-desc">Answer five quick questions — whether you own your home, your solar status, your main battery goal, your postcode and your contact details. No electricity bill required at this stage.</p>
+        <div class="step-detail"><div class="step-detail-title">What we collect</div><ul><li>Property ownership status</li><li>Existing solar setup</li><li>Primary goal (bill savings, backup, export optimisation)</li><li>Postcode (to identify your area installer)</li><li>Name, email, phone</li></ul></div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num-big">2</div>
+      <div class="step-content">
+        <div class="step-title">We identify your area's #1 installer</div>
+        <p class="step-desc">We match your postcode against our vetted network and identify the single best CEC-accredited installer for your area. We consider: installation volume in your suburb, CEC accreditation status, licence currency, customer satisfaction score, and brand access.</p>
+        <div class="step-detail"><div class="step-detail-title">Our vetting criteria</div><ul><li>Current CEC Designer &amp; Installer accreditation</li><li>Valid state electrical contractor licence</li><li>Public liability insurance ≥ $5M</li><li>Minimum 2 years active in market</li><li>No unresolved complaints with state electrical authority</li></ul></div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num-big">3</div>
+      <div class="step-content">
+        <div class="step-title">Your installer contacts you within 24 hours</div>
+        <p class="step-desc">Your matched installer calls or emails within 24 business hours. They'll ask to review your last 12 months of electricity bills, discuss your goals, and arrange a site visit if needed. This is obligation-free at every stage.</p>
+        <div class="step-detail"><div class="step-detail-title">What your installer will provide</div><ul><li>Full itemised, written quote</li><li>Federal rebate applied at point of sale</li><li>State rebate eligibility assessment</li><li>System sizing based on your actual usage</li><li>Estimated annual bill savings and payback period</li></ul></div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num-big">4</div>
+      <div class="step-content">
+        <div class="step-title">You decide — entirely on your terms</div>
+        <p class="step-desc">Review the quote with full knowledge (our guides and tools are designed for exactly this moment). Accept it, decline it, or use our <a href="/tools/installer-checklist" style="color:#93C5FD;">vetting checklist</a> to dig deeper. No pressure, no follow-up harassment.</p>
+        <div class="step-detail"><div class="step-detail-title">After you say yes</div><ul><li>Installation typically takes 4–8 weeks (grid approval timelines vary)</li><li>Federal rebate deducted from your invoice — no claiming required</li><li>Grid connection managed by your installer</li><li>CEC certificate of compliance issued post-installation</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="faq-section">
+  <h2>Common questions</h2>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is this really free for homeowners?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div><div class="faq-a">Yes, completely. We earn a referral fee from installers only when a job is completed — you pay nothing extra. Our matching service is funded by the installer side of the transaction.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why only one installer and not four quotes?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div><div class="faq-a">Multiple quote services create a race-to-the-bottom where installers cut corners to win on price. We pre-select the best installer in your area so you get quality service, not a bidding war. If you want to compare, use our guides to benchmark the quote against market rates.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Am I obligated to proceed after requesting a match?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div><div class="faq-a">No. Requesting a match and receiving a quote creates zero obligation. You can say no at any point, including after a site visit. We ask installers to respect this unconditionally.</div></div>
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Will I receive follow-up marketing or calls from multiple companies?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div><div class="faq-a">No. Your details are shared with exactly one installer — your match. We don't sell data to third parties or other installers. See our <a href="/privacy-policy" style="color:var(--blue);">Privacy Policy</a>.</div></div>
+</div>
+
+<div class="cta-band">
+  <h2>Ready to get started?</h2>
+  <p>Takes 2 minutes. Obligation-free. Your matched installer will contact you within 24 hours.</p>
+  <a href="/#quote" class="btn-white">Get Matched Free &rarr;</a>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo">
+      <a href="/" class="logo" style="display:inline-flex;margin-bottom:10px;">
+        <div class="logo-bolt"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <span class="logo-text">Reclaim<span>Power</span></span>
+      </a>
+      <p class="footer-tagline">Australia's home battery matching platform. Vetted installers, no cowboys, your rebate applied.</p>
+    </div>
+    <div class="footer-col"><h4>Free Guides</h4><ul><li><a href="/guides">All Free Guides</a></li><li><a href="/guides/home-battery-cost-australia">Battery Cost Guide 2026</a></li><li><a href="/guides/battery-rebate-guide">Battery Rebates by State</a></li><li><a href="/guides/battery-brands-compared">Brand Comparison</a></li><li><a href="/guides/is-a-battery-worth-it">Is a Battery Worth It?</a></li></ul></div>
+    <div class="footer-col"><h4>Free Tools</h4><ul><li><a href="/tools/rebate-calculator">Rebate Calculator</a></li><li><a href="/tools/installer-checklist">Installer Checklist</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="/about">About</a></li><li><a href="/how-it-works">How It Works</a></li><li><a href="/for-installers">For Installers</a></li><li><a href="/contact">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="/privacy-policy">Privacy Policy</a></li><li><a href="/terms-of-use">Terms of Use</a></li><li><a href="/disclaimer">Disclaimer</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 ReclaimPower &middot; reclaimpower.com.au &middot; All rights reserved.</span>
+    <span>Australian-owned and operated</span>
+  </div>
+</footer>
+<script>
+function toggleMob(){var h=document.getElementById('hamburger'),m=document.getElementById('mobNav');h.classList.toggle('open');m.classList.toggle('open');document.body.style.overflow=m.classList.contains('open')?'hidden':'';}
+function closeMob(){document.getElementById('hamburger').classList.remove('open');document.getElementById('mobNav').classList.remove('open');document.body.style.overflow='';}
+function toggleFaq(el){var item=el.parentElement,isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open');}
+</script>
+</body>
+</html>
