@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Battery Rebate Calculator Australia 2026 — Free Tool | ReclaimPower</title>
+  <title>Battery Rebate Calculator Australia 2026: Free Tool | ReclaimPower</title>
   <meta name="description" content="Calculate your exact home battery rebate from the federal Cheaper Home Batteries Program. Enter your state and system size for an instant estimate." />
   <link rel="canonical" href="https://reclaimpower.com.au/tools/rebate-calculator" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -129,7 +129,7 @@
 <div class="page-hero">
   <div class="eyebrow">Free Tool</div>
   <h1>Battery Rebate<br>Calculator</h1>
-  <p>See your estimated federal rebate instantly. Select your state and system size — we'll show you the saving from the Cheaper Home Batteries Program and estimated net cost.</p>
+  <p>See your estimated federal rebate instantly. Select your state and system size, we'll show you the saving from the Cheaper Home Batteries Program and estimated net cost.</p>
 </div>
 
 <div class="calc-wrap">
@@ -164,8 +164,8 @@
     <div class="fg">
       <label>Do you already have solar panels?</label>
       <select id="solarSelect">
-        <option value="yes">Yes — I have solar</option>
-        <option value="no">No — battery only</option>
+        <option value="yes">Yes, I have solar</option>
+        <option value="no">No, battery only</option>
         <option value="new">Getting solar + battery together</option>
       </select>
     </div>
@@ -175,13 +175,13 @@
 
   <div class="result-card" id="resultCard">
     <div class="result-title">Federal Rebate Estimate</div>
-    <div class="result-rebate" id="resultRebate">—</div>
+    <div class="result-rebate" id="resultRebate"></div>
     <div class="result-sub" id="resultSub">Select your state and system size to see your estimate</div>
     <div class="result-rows" id="resultRows" style="display:none;">
-      <div class="result-row"><span class="result-row-label">Before rebate (est.)</span><span class="result-row-val" id="rBefore">—</span></div>
-      <div class="result-row"><span class="result-row-label">Federal rebate</span><span class="result-row-val" id="rRebate" style="color:#93C5FD;">—</span></div>
-      <div class="result-row" style="background:rgba(255,255,255,0.18);"><span class="result-row-label" style="font-weight:700;color:white;">Your price (est.)</span><span class="result-row-val" id="rAfter" style="font-size:1.2rem;">—</span></div>
-      <div class="result-row" id="rStateRow" style="display:none;"><span class="result-row-label">+ State incentive</span><span class="result-row-val" id="rState" style="color:#FCD34D;">—</span></div>
+      <div class="result-row"><span class="result-row-label">Before rebate (est.)</span><span class="result-row-val" id="rBefore"></span></div>
+      <div class="result-row"><span class="result-row-label">Federal rebate</span><span class="result-row-val" id="rRebate" style="color:#93C5FD;"></span></div>
+      <div class="result-row" style="background:rgba(255,255,255,0.18);"><span class="result-row-label" style="font-weight:700;color:white;">Your price (est.)</span><span class="result-row-val" id="rAfter" style="font-size:1.2rem;"></span></div>
+      <div class="result-row" id="rStateRow" style="display:none;"><span class="result-row-label">+ State incentive</span><span class="result-row-val" id="rState" style="color:#FCD34D;"></span></div>
     </div>
     <div class="state-note" id="stateNote" style="display:none;"></div>
     <div class="result-note">Estimates based on CEC-accredited installation in metropolitan areas. May 2026 rebate rates. Actual savings confirmed by your installer.</div>
@@ -220,12 +220,12 @@ function selectSize(btn){
 }
 
 var stateNotes = {
-  VIC: 'Victoria also offers the Solar Victoria Battery Loan (up to $8,800 interest-free) and the Solar Homes Battery Rebate (up to $2,950) — potentially stacking with the federal rebate.',
-  SA:  'South Australia has the Home Battery Scheme (subsidised loans via CEFC). SA also has the most active VPP market — expect additional $200–$600/yr from VPP enrolment.',
+  VIC: 'Victoria also offers the Solar Victoria Battery Loan (up to $8,800 interest-free) and the Solar Homes Battery Rebate (up to $2,950) , potentially stacking with the federal rebate.',
+  SA:  'South Australia has the Home Battery Scheme (subsidised loans via CEFC). SA also has the most active VPP market , expect additional $200–$600/yr from VPP enrolment.',
   QLD: 'Queensland\'s Battery Booster provides a $3,000 rebate for eligible low-income households, stacking with the federal rebate.',
   ACT: 'The ACT Sustainable Household Scheme offers interest-free loans through Brighte, stacking with the federal rebate.',
   NSW: 'NSW relies on the federal scheme. The Peak Demand Reduction Scheme (PDRS) provides ongoing credits for VPP-connected batteries.',
-  WA:  'WA currently relies on the federal scheme — no state-specific battery rebate as at 2026.',
+  WA:  'WA currently relies on the federal scheme , no state-specific battery rebate as at 2026.',
   TAS: 'Tasmania relies on the federal scheme. High hydro penetration makes batteries most valuable for outage protection and TOU arbitrage.',
   NT:  'NT has specific remote/off-grid incentives. Check with your local CEC-accredited installer for current NT programs.'
 };
