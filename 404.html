@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | ReclaimPower</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blue:      #1D4ED8;
+      --blue-deep: #1E3A8A;
+      --blue-pale: #EFF6FF;
+      --blue-mid:  #BFDBFE;
+      --amber:     #F59E0B;
+      --white:     #FFFFFF;
+      --ink:       #0F172A;
+      --muted:     #475569;
+      --muted-lt:  #64748B;
+      --border:    rgba(29,78,216,0.13);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--blue-pale); color: var(--ink); overflow-x: hidden; min-height: 100vh; display: flex; flex-direction: column; }
+    body::before {
+      content: ''; position: fixed; top: -40vh; left: 50%; transform: translateX(-50%);
+      width: 180vw; height: 180vw;
+      background: conic-gradient(from 0deg,rgba(191,219,254,0.07) 0deg,rgba(29,78,216,0.04) 10deg,rgba(191,219,254,0.07) 20deg,rgba(29,78,216,0.03) 30deg,rgba(191,219,254,0.07) 40deg,rgba(29,78,216,0.04) 50deg,rgba(191,219,254,0.07) 60deg,rgba(29,78,216,0.03) 70deg,rgba(191,219,254,0.07) 80deg,rgba(29,78,216,0.04) 90deg,rgba(191,219,254,0.07) 100deg,rgba(29,78,216,0.03) 110deg,rgba(191,219,254,0.07) 120deg,rgba(29,78,216,0.04) 130deg,rgba(191,219,254,0.07) 140deg,rgba(29,78,216,0.03) 150deg,rgba(191,219,254,0.07) 160deg,rgba(29,78,216,0.04) 170deg,rgba(191,219,254,0.07) 180deg);
+      border-radius: 50%; pointer-events: none; z-index: 0;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 6vw; background: rgba(239,246,255,0.92);
+      backdrop-filter: blur(18px); border-bottom: 1px solid var(--border);
+    }
+    .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .logo-bolt {
+      width: 38px; height: 38px;
+      background: linear-gradient(135deg, var(--blue), var(--blue-deep));
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 0 5px rgba(29,78,216,0.15), 0 0 0 10px rgba(29,78,216,0.06);
+      animation: pulse-bolt 3s ease-in-out infinite; flex-shrink: 0;
+    }
+    .logo-bolt svg { width: 19px; height: 19px; }
+    @keyframes pulse-bolt {
+      0%,100% { box-shadow: 0 0 0 5px rgba(29,78,216,0.15), 0 0 0 10px rgba(29,78,216,0.06); }
+      50%      { box-shadow: 0 0 0 8px rgba(29,78,216,0.2),  0 0 0 16px rgba(29,78,216,0.04); }
+    }
+    .logo-text { font-size: 1.3rem; font-weight: 800; color: var(--ink); letter-spacing: -0.03em; }
+    .logo-text span { color: var(--blue); }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { text-decoration: none; font-size: 0.9rem; font-weight: 600; color: var(--muted); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--blue-deep); }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--blue), var(--blue-deep)) !important;
+      color: white !important; padding: 11px 24px !important; border-radius: 100px;
+      font-weight: 700 !important; font-size: 0.88rem !important;
+      box-shadow: 0 4px 16px rgba(29,78,216,0.35); transition: transform 0.2s, box-shadow 0.2s !important;
+    }
+    .nav-cta:hover { transform: translateY(-1px) !important; box-shadow: 0 8px 24px rgba(29,78,216,0.45) !important; }
+
+    /* 404 MAIN */
+    main {
+      flex: 1; display: flex; align-items: center; justify-content: center;
+      padding: 140px 6vw 80px; position: relative; z-index: 1;
+    }
+    .nf-wrap {
+      text-align: center; max-width: 520px;
+      animation: slideUp 0.7s ease forwards; opacity: 0;
+    }
+    @keyframes slideUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+
+    .nf-mascot-wrap {
+      position: relative; display: inline-block; margin-bottom: 32px;
+    }
+    .nf-mascot {
+      height: 200px; width: auto; display: block;
+      filter: drop-shadow(0 16px 40px rgba(29,78,216,0.18));
+    }
+    .nf-question {
+      position: absolute; top: -10px; right: -18px;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--amber), #D97706);
+      color: white; font-size: 1.5rem; font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(245,158,11,0.45);
+      animation: floaty 3s ease-in-out infinite;
+    }
+    @keyframes floaty { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+
+    .nf-code {
+      font-size: 1rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--blue); margin-bottom: 14px;
+    }
+    .nf-title {
+      font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 900; color: var(--ink); letter-spacing: -0.04em; line-height: 1.1;
+      margin-bottom: 18px;
+    }
+    .nf-title .highlight {
+      background: linear-gradient(135deg, var(--blue), var(--blue-deep));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .nf-title .italic { font-family: 'Lora', serif; font-style: italic; font-weight: 600; }
+    .nf-sub {
+      font-size: 1rem; color: var(--muted-lt); line-height: 1.75; margin-bottom: 36px;
+    }
+    .nf-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: linear-gradient(135deg, var(--blue), var(--blue-deep));
+      color: white; font-family: 'Outfit', sans-serif; font-weight: 700;
+      font-size: 1rem; padding: 16px 32px; border-radius: 100px;
+      text-decoration: none; box-shadow: 0 6px 28px rgba(29,78,216,0.38);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 36px rgba(29,78,216,0.5); }
+    .btn-outline {
+      display: inline-flex; align-items: center;
+      color: var(--blue-deep); font-family: 'Outfit', sans-serif;
+      font-weight: 700; font-size: 1rem; padding: 16px 28px; border-radius: 100px;
+      text-decoration: none; border: 2px solid rgba(29,78,216,0.25);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--blue); background: rgba(29,78,216,0.05); }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .nf-mascot { height: 160px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-bolt">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+      </svg>
+    </div>
+    <span class="logo-text">Reclaim<span>Power</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/guides">Free Guides</a></li>
+    <li><a href="/rebates">Rebate Checker</a></li>
+    <li><a href="/how-it-works">How It Works</a></li>
+    <li><a href="/faq">FAQ</a></li>
+    <li><a href="/#quote" class="nav-cta">Get Matched Free</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="nf-wrap">
+    <div class="nf-mascot-wrap">
+      <img src="/ReclaimPowerMascotShrugging.png" alt="ReclaimPower mascot shrugging" class="nf-mascot">
+      <div class="nf-question">?</div>
+    </div>
+    <div class="nf-code">404 &mdash; Page not found</div>
+    <h1 class="nf-title">Looks like this page<br>went <span class="highlight italic">off-grid.</span></h1>
+    <p class="nf-sub">We couldn't find what you were looking for. Head back home to check your rebate, or browse our free guides.</p>
+    <div class="nf-btns">
+      <a href="/" class="btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="16" height="16"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        Back to Home
+      </a>
+      <a href="/guides" class="btn-outline">Browse Free Guides &rarr;</a>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
