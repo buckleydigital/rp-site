@@ -10,16 +10,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --blue:      #1D4ED8;
-      --blue-deep: #1E3A8A;
-      --blue-pale: #EFF6FF;
-      --blue-mid:  #BFDBFE;
+      --blue:      #DC2626;
+      --blue-deep: #991B1B;
+      --blue-pale: #FEF2F2;
+      --blue-mid:  #FECACA;
       --amber:     #F59E0B;
       --white:     #FFFFFF;
       --ink:       #0F172A;
       --muted:     #475569;
       --muted-lt:  #64748B;
-      --border:    rgba(29,78,216,0.13);
+      --border:    rgba(220,38,38,0.13);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -27,7 +27,7 @@
     body::before {
       content: ''; position: fixed; top: -40vh; left: 50%; transform: translateX(-50%);
       width: 180vw; height: 180vw;
-      background: conic-gradient(from 0deg,rgba(191,219,254,0.07) 0deg,rgba(29,78,216,0.04) 10deg,rgba(191,219,254,0.07) 20deg,rgba(29,78,216,0.03) 30deg,rgba(191,219,254,0.07) 40deg,rgba(29,78,216,0.04) 50deg,rgba(191,219,254,0.07) 60deg,rgba(29,78,216,0.03) 70deg,rgba(191,219,254,0.07) 80deg,rgba(29,78,216,0.04) 90deg,rgba(191,219,254,0.07) 100deg,rgba(29,78,216,0.03) 110deg,rgba(191,219,254,0.07) 120deg,rgba(29,78,216,0.04) 130deg,rgba(191,219,254,0.07) 140deg,rgba(29,78,216,0.03) 150deg,rgba(191,219,254,0.07) 160deg,rgba(29,78,216,0.04) 170deg,rgba(191,219,254,0.07) 180deg);
+      background: conic-gradient(from 0deg,rgba(254,202,202,0.07) 0deg,rgba(220,38,38,0.04) 10deg,rgba(254,202,202,0.07) 20deg,rgba(220,38,38,0.03) 30deg,rgba(254,202,202,0.07) 40deg,rgba(220,38,38,0.04) 50deg,rgba(254,202,202,0.07) 60deg,rgba(220,38,38,0.03) 70deg,rgba(254,202,202,0.07) 80deg,rgba(220,38,38,0.04) 90deg,rgba(254,202,202,0.07) 100deg,rgba(220,38,38,0.03) 110deg,rgba(254,202,202,0.07) 120deg,rgba(220,38,38,0.04) 130deg,rgba(254,202,202,0.07) 140deg,rgba(220,38,38,0.03) 150deg,rgba(254,202,202,0.07) 160deg,rgba(220,38,38,0.04) 170deg,rgba(254,202,202,0.07) 180deg);
       border-radius: 50%; pointer-events: none; z-index: 0;
     }
 
@@ -35,7 +35,7 @@
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 18px 6vw; background: rgba(239,246,255,0.92);
+      padding: 18px 6vw; background: rgba(254,242,242,0.92);
       backdrop-filter: blur(18px); border-bottom: 1px solid var(--border);
     }
     .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
@@ -43,13 +43,13 @@
       width: 38px; height: 38px;
       background: linear-gradient(135deg, var(--blue), var(--blue-deep));
       border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 0 0 5px rgba(29,78,216,0.15), 0 0 0 10px rgba(29,78,216,0.06);
+      box-shadow: 0 0 0 5px rgba(220,38,38,0.15), 0 0 0 10px rgba(220,38,38,0.06);
       animation: pulse-bolt 3s ease-in-out infinite; flex-shrink: 0;
     }
     .logo-bolt svg { width: 19px; height: 19px; }
     @keyframes pulse-bolt {
-      0%,100% { box-shadow: 0 0 0 5px rgba(29,78,216,0.15), 0 0 0 10px rgba(29,78,216,0.06); }
-      50%      { box-shadow: 0 0 0 8px rgba(29,78,216,0.2),  0 0 0 16px rgba(29,78,216,0.04); }
+      0%,100% { box-shadow: 0 0 0 5px rgba(220,38,38,0.15), 0 0 0 10px rgba(220,38,38,0.06); }
+      50%      { box-shadow: 0 0 0 8px rgba(220,38,38,0.2),  0 0 0 16px rgba(220,38,38,0.04); }
     }
     .logo-text { font-size: 1.3rem; font-weight: 800; color: var(--ink); letter-spacing: -0.03em; }
     .logo-text span { color: var(--blue); }
@@ -60,9 +60,9 @@
       background: linear-gradient(135deg, var(--blue), var(--blue-deep)) !important;
       color: white !important; padding: 11px 24px !important; border-radius: 100px;
       font-weight: 700 !important; font-size: 0.88rem !important;
-      box-shadow: 0 4px 16px rgba(29,78,216,0.35); transition: transform 0.2s, box-shadow 0.2s !important;
+      box-shadow: 0 4px 16px rgba(220,38,38,0.35); transition: transform 0.2s, box-shadow 0.2s !important;
     }
-    .nav-cta:hover { transform: translateY(-1px) !important; box-shadow: 0 8px 24px rgba(29,78,216,0.45) !important; }
+    .nav-cta:hover { transform: translateY(-1px) !important; box-shadow: 0 8px 24px rgba(220,38,38,0.45) !important; }
 
     /* 404 MAIN */
     main {
@@ -79,8 +79,8 @@
       position: relative; display: inline-block; margin-bottom: 32px;
     }
     .nf-mascot {
-      height: 200px; width: auto; display: block;
-      filter: drop-shadow(0 16px 40px rgba(29,78,216,0.18));
+      height: 200px; width: 200px; display: block; color: var(--blue);
+      filter: drop-shadow(0 16px 40px rgba(220,38,38,0.18));
     }
     .nf-question {
       position: absolute; top: -10px; right: -18px;
@@ -116,18 +116,18 @@
       background: linear-gradient(135deg, var(--blue), var(--blue-deep));
       color: white; font-family: 'Outfit', sans-serif; font-weight: 700;
       font-size: 1rem; padding: 16px 32px; border-radius: 100px;
-      text-decoration: none; box-shadow: 0 6px 28px rgba(29,78,216,0.38);
+      text-decoration: none; box-shadow: 0 6px 28px rgba(220,38,38,0.38);
       transition: transform 0.2s, box-shadow 0.2s;
     }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 36px rgba(29,78,216,0.5); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 36px rgba(220,38,38,0.5); }
     .btn-outline {
       display: inline-flex; align-items: center;
       color: var(--blue-deep); font-family: 'Outfit', sans-serif;
       font-weight: 700; font-size: 1rem; padding: 16px 28px; border-radius: 100px;
-      text-decoration: none; border: 2px solid rgba(29,78,216,0.25);
+      text-decoration: none; border: 2px solid rgba(220,38,38,0.25);
       transition: border-color 0.2s, background 0.2s;
     }
-    .btn-outline:hover { border-color: var(--blue); background: rgba(29,78,216,0.05); }
+    .btn-outline:hover { border-color: var(--blue); background: rgba(220,38,38,0.05); }
 
     @media (max-width: 640px) {
       .nav-links { display: none; }
@@ -157,7 +157,14 @@
 <main>
   <div class="nf-wrap">
     <div class="nf-mascot-wrap">
-      <img src="/ReclaimPowerMascotShrugging.png" alt="ReclaimPower mascot shrugging" class="nf-mascot">
+      <svg class="nf-mascot" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Solar panel">
+        <path d="M18 24 H54 L46 44 H10 Z"/>
+        <path d="M15.3 30.7 H51.3 M12.7 37.3 H48.7"/>
+        <path d="M27 24 L19 44 M36 24 L28 44 M45 24 L37 44"/>
+        <path d="M28 44 V54 M22 58 L28 54 L34 58"/>
+        <circle cx="48" cy="11" r="5"/>
+        <path d="M48 4 V1 M48 18 V21 M55 11 H58 M41 11 H38 M53 6 L55 4 M43 6 L41 4 M53 16 L55 18 M43 16 L41 18"/>
+      </svg>
       <div class="nf-question">?</div>
     </div>
     <div class="nf-code">404 &mdash; Page not found</div>
